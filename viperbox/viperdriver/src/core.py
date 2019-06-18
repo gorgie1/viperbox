@@ -55,7 +55,7 @@ class Session(jsondata):
     def destroy(self):
         sid = self.session_id # saving id for logger; will be destroyed with execution of next line
         super().destroy()
-        logger.debug(sid + ' destroyed.')
+        logger.debug('Session ' + sid + ' destroyed.')
         self.__init__()
 
 class SessionDriver(Remote):
@@ -81,14 +81,14 @@ class SessionDriver(Remote):
             try:
                 self.session.get_from_file()
                 self.session_connect()
-                logger.debug('Connected to session ' + self.session.session_id)
+                logger.debug('Connected to session ' + self.session.session_id + '.')
             except:
                 raise Exception('Could not connect to existing session.')
         else:
             super().__init__(command_executor=self.session.url, options=self.options)
             self.session.session_id = self.session_id
             self.session.exists = True
-            logger.debug('Created session ' + self.session_id)
+            logger.debug('Session ' + self.session_id + ' created.')
             if self.session.savetofile:
                 self.session.save_to_file()
 
