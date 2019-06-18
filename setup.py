@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='tesqos',
+    name='viperbox',
     author='vipervit',
     author_email='vitolg1@gmail.com',
     licence='MIT',
