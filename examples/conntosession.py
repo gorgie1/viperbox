@@ -5,7 +5,7 @@ The first execution will create a brand new browser session.
 As the result, the session info will be saved in a file.
 During the second execution, the script will discover the file and will pass the session info from it to the viperdriver instance.
 Then the viperdriver instance will connect to the existing session and will be able to take command of it (in this case hitting a URL and then closing it).
-To execute the script: 'python -m viperbox.examples.sessions'
+To execute the script: 'python -m viperbox.examples.conntosession'
 """
 
 from . import SeleniumDriver
