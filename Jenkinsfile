@@ -6,7 +6,7 @@ pipeline {
 
       stage('TEST') {
         steps('Run pytest tests - viperlib') {
-          sh 'pytest viperlib/tests'
+          sh 'pytest viperbox/viperlib/tests'
         }
 
       }
