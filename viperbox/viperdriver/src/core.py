@@ -1,7 +1,6 @@
 from selenium.webdriver import Remote
 from selenium.webdriver import ChromeOptions
 from selenium.webdriver import IeOptions
-from ...viperlib import dir_separator_by_platform
 from ...viperlib.src.jsd import jsondata
 from .. import logger, PATH_SELF
 

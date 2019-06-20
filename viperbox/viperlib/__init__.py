@@ -7,19 +7,14 @@ import logging
 logger = logging.getLogger(__file__)
 logger.setLevel(logging.DEBUG)
 console = logging.StreamHandler()
-console.setLevel(logging.INFO)
+console.setLevel(logging.DEBUG)
 logger.addHandler(console)
 
-def dir_separator_by_platform():
-    import sys
-    if sys.platform == 'darwin': return '/'
-    if sys.platform == 'win32': return '\\'
-
 def dir_get(path):
-    separator = dir_separator_by_platform()
-    s= path.split(separator)
+    import os
+    s = path.split(os.sep)
     s.pop()
-    return separator.join(s)
+    return os.sep.join(s)
 
 def parent_module_name_get(modulename=__name__):
     return '.'.join(modulename.split('.')[:-1])

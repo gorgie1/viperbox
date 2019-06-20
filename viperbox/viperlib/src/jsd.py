@@ -1,6 +1,5 @@
 import os
 from .. import logger
-from .. import dir_separator_by_platform
 import json
 
 class jsondata():
@@ -35,7 +34,7 @@ class jsondata():
 
     def full_path(self):
         assert self.location != None, 'File location is not set.'
-        return self.location + dir_separator_by_platform() + self.filename
+        return self.location + os.sep + self.filename
 
     @property
     def contents(self):
