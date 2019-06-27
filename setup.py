@@ -6,6 +6,6 @@ setup(
     author_email='vitolg1@gmail.com',
     licence='MIT',
     description='Collection of tools and libraries including custom expansion of Selenium WebDriver.',
-    version='0.30',
+    version='0.31',
     packages=find_packages()
 )
