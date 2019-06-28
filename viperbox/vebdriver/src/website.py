@@ -1,6 +1,6 @@
 from .core import SessionDriver
-from ..viperlib.src.jsd import jsondata
-from ..viperlib import dir_get
+from ...viperlib.src.jsd import jsondata
+from ...viperlib import dir_get
 from .. import logger
 
 class logininfo(jsondata):
