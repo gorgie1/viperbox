@@ -100,6 +100,14 @@ class SessionDriver(Remote):
         self.close()
         self.session_id = self.session.session_id # do not remove: assigning property to RemoteWebDriver parent object
 
+   def switch_to_window(drv, s, strict=False): # strict mode if True: title must match exaclty
+       rc = False
+       for handle in drv.window_handles:
+           drv.switch_to_window(handle)
+           if (strict and drv.title == title) or (not strict and s in drv.title):
+              rc = drv.title
+              return rc    
+        
     def quit(self):
         super().quit()
         if self.session.exists:
